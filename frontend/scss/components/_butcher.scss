@@ -1,0 +1,222 @@
+.butcher__wrapper {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   overflow: hidden;
+}
+
+
+
+.butcher {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   transform-origin: 50% 100%;
+
+   & img {
+       width: 100%;
+   }
+
+   &__hat {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      background-size: cover;
+      transform: rotate(5deg);
+      width: 33%;
+   }
+
+   &__pig {
+      position: absolute;
+      left: 35%;
+      bottom: 4.5%;
+      width: 30%;
+   }
+
+   &__hand {
+       position: absolute;
+       top: 9%;
+       left: 8%;
+       width: 30%;
+       transform-origin: 70% 80%;
+   }
+
+   &__mouth {
+       position: absolute;
+       top: 19.3%;
+       left: 61.5%;
+       width: 7%;
+   }
+
+   &__mustache {
+       position: absolute;
+       top: 15.7%;
+       left: 58.3%;
+       width: 14%;
+   }
+}
+
+.intro__butcher {
+   width: 42%;
+}
+.main__butcher {
+   width: 28%;
+   bottom: -1%;
+   z-index: 2;
+
+   &:before{
+      content: '';
+      position: absolute;
+      width: 176px;
+      height: 90px;
+      bottom: 88%;
+      left: 51%;
+      background-size: cover;
+      -webkit-transform: rotate(5deg);
+      transform: rotate(5deg);
+   }
+}
+
+.result__butcher {
+   width: 36%;
+   z-index: 1;
+
+   &:before{
+      content: '';
+      position: absolute;
+      width: 225px;
+      height: 116px;
+      bottom: 88%;
+      left: 51%;
+      background-size: cover;
+      -webkit-transform: rotate(5deg);
+      transform: rotate(5deg);
+   }
+}
+
+.butcher__anim {
+   animation: butcher 5s infinite linear;
+   
+   .butcher {
+       
+       
+       &__hand {
+           animation: hands 4s infinite linear;
+       }
+       
+       &__mouth.move {
+           animation: mouth 0.3s infinite linear;
+       }
+   
+       &__mustache {
+           animation: mustache 3s infinite linear;
+       }
+   }
+}
+
+// eyelids
+
+// .eyelids__left-up {
+//     position: absolute;
+//     top: 12%;
+//     left: 60%;
+//     width: 5%;
+// }
+// .eyelids__left-down {
+//     position: absolute;
+//     top: 13%;
+//     left: 60%;
+//     width: 5%;
+// }
+
+// .eyelids__right-up {
+//     position: absolute;
+//     top: 13%;
+//     left: 68%;
+//     width: 5%;
+// }
+
+// .eyelids__right-down {
+//     position: absolute;
+//     top: 14%;
+//     left: 68%;
+//     width: 5%;
+// }
+
+
+
+
+@keyframes butcher {
+   1%{ transform: rotate(0deg)};
+   // 3%{transform: rotate(-12deg)};
+   // 6%{transform: rotate(12deg)};
+   // 9%{transform: rotate(-12deg)};
+   // 12%{transform: rotate(12deg)};
+   15%{transform: rotate(1deg)};
+   30%{transform: rotate(0deg)};
+   31%{transform: scale(1)};
+   42%{transform: scale(1.02)};
+   58%{transform: scale(1)};
+   100%{transform: rotate(0deg)}
+}
+
+@keyframes hands {
+   1%{ transform: rotate(0deg)};
+   // 3%{transform: rotate(-12deg)};
+   // 6%{transform: rotate(12deg)};
+   // 9%{transform: rotate(-12deg)};
+   // 12%{transform: rotate(12deg)};
+   15%{transform: rotate(-18deg)};
+   30%{transform: rotate(0deg)};
+   100%{transform: rotate(0deg)}
+}
+
+@keyframes mouth {
+   1%{ 
+    transform:  translate(0, 0%);
+   };
+
+   50%{ 
+    transform:  translate(0, 21%);
+   };
+
+   100%{ 
+    transform:  translate(0, 0%);
+   };
+   /*
+   1%{ transform: translateY(0%)};
+   5%{transform: translateY(21%)};
+   10%{transform: translateY(0%)};
+   15%{transform: translateY(21%)};
+   20%{transform: translateY(0%)};
+   25%{transform: translateY(21%)};
+   30%{transform: translateY(0%)};
+   35%{transform: translateY(21%)};
+   40%{transform: translateY(0%)};
+   100%{transform: translateY(0%)};*/
+}
+
+@keyframes mustache {
+   1%{ transform: rotate(0deg)};
+   7%{transform: rotate(-1deg)};
+   14%{transform: rotate(1deg)};
+   21%{transform: rotate(-1deg)};
+   28%{transform: rotate(1deg)};
+   35%{transform: rotate(-1deg)};
+   42%{transform: rotate(1deg)};
+   49%{transform: rotate(0deg)};
+   // 80%{transform: translateY(0%)};
+   85%{transform: translate(0, 2%)};
+   88%{transform: translate(0, 0%)};
+   92%{transform: translate(0, 2%)};
+   95%{transform: translate(0, 0%)};
+   100%{transform: rotate(0deg)};
+}
+
+@media screen and (max-width: 768px) {
+   .intro__butcher {
+       width: 59%;
+   }
+}

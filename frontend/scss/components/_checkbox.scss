@@ -1,0 +1,50 @@
+.checkbox{
+
+   label{
+      display: flex;
+      align-items: flex-start;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+
+      @include res(desktop){
+
+         &:hover input ~ span:first-of-type{
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,0.5);
+         }
+
+      }
+   }
+
+   input{
+      display: none;
+
+      & ~ span:first-of-type{
+         width: 17px;
+         height: 17px;
+         border-radius: 4px;
+         border: 2px solid $grey-base;
+         position: relative;
+         display: block;
+         font-size: 12px;
+         box-sizing: border-box;
+         margin-right: 15px;
+         transition: box-shadow .3s;
+
+         i{
+            position: absolute;
+            left: 1px;
+            top: 1px;
+            opacity: 0;
+            transition: opacity .15s;
+         }
+      }
+
+      &:checked ~ span:first-of-type{
+
+         i{
+            opacity: 1;
+         }
+      }
+   }
+
+}

@@ -1,0 +1,113 @@
+.wrap-in-front {
+    position: absolute;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    text-align: center;
+}
+
+.pause__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none; 
+    background-color: #000;
+    z-index: 9000;
+    &.test {
+      right: auto;
+      bottom: auto;
+      width: 100px;
+      height: 100px;
+    }
+}
+
+.pause__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    height: 100%;
+}
+  
+.pause__overlay video {
+    width: 100%;
+}
+
+.intro__table {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    
+    img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.intro__vaget {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    padding-bottom: 2%;
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.intro__vaget img {
+    transform: translateX(45%);
+}
+
+.game-type-button_shake {
+   animation: shake .4s;
+}
+
+// .game-type-button_shake:nth-child(1) {
+//     animation: shake .4s;
+// }
+
+// .game-type-button_shake:nth-child(2) {
+//     animation: shake .3s 1s;
+
+// }
+
+// .game-type-button_shake:nth-child(3) {
+//     animation: shake .2s .5s;
+
+// }
+
+// .game-type-button_shake:nth-child(4) {
+//     animation: shake .35s 1.5s;
+
+// }
+
+@keyframes shake {
+    0% { transform: translate(10px, 10px) rotate(0deg); }
+    10% { transform: translate(-6px, -4px) rotate(-8deg); }
+    20% { transform: translate(-5px, 0px) rotate(8deg); }
+    60% { transform: translate(-6px, 5px) rotate(0deg); }
+    70% { transform: translate(10px, 8px) rotate(-8deg); }
+    80% { transform: translate(-6px, -4px) rotate(8deg); }
+    90% { transform: translate(5px, 5px) rotate(0deg); }
+    100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+@media screen and (max-width: 768px) {
+    .wrap-in-front {
+        background-position: 26.5% 50%;
+    }
+    .intro__vaget {
+        width: 39%;
+    }
+}

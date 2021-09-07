@@ -1,0 +1,252 @@
+@mixin field {
+   border-top-left-radius: 4px;
+   border-top-right-radius: 4px;
+   box-sizing: border-box;
+}
+
+@mixin margin-equiv {
+   padding: 0 4px;
+   width: 100%;
+   box-sizing: border-box;
+
+   @include res(desktop) {
+      padding: 0 8px;
+   }
+}
+
+$input-height: 56px;
+
+.form {
+
+   &__inner{
+      margin-bottom: 50px;
+      min-height: 204px;
+
+      @include res(desktop){
+         margin-bottom: 80px;
+      }
+   }
+
+   &__row {
+      display: flex;
+      justify-content: space-between;
+      min-width: 100%;
+      margin: 0 0 25px;
+
+      @include res(tablet){
+         margin-bottom: 35px;
+      }
+
+   }
+
+   &__warning{
+      display: none;
+
+      &.active{
+         display: block;
+      }
+
+      p{
+         font-size: 14px;
+         color: $red;
+      }
+
+   }
+
+   &__fieldset {
+      position: relative;
+      width: 100%;
+      min-height: $input-height;
+      box-sizing: border-box;
+      height: $input-height;
+
+      input {
+         font-size: 18px;
+         padding: 10px 10px 10px 10px;
+         box-sizing: border-box;
+         display: block;
+         width: 100%;
+         border: none;
+         border-bottom: 2px solid;
+         color: $grey-base;
+         height: 100%;
+
+         &:focus {
+            outline: none;
+         }
+
+         &:focus ~ label, &:valid ~ label {
+            font-size: 12px;
+            bottom: auto;
+            margin: 0;
+            top: 2px;
+         }
+
+         &.active ~ label {
+            top: 2px;
+            font-size: 12px;
+            bottom: auto;
+            margin: 0;
+         }
+
+      }
+
+      textarea {
+         @include field;
+         font-size: 16px;
+         padding: 20px 10px 10px 10px;
+         box-sizing: border-box;
+         display: block;
+         width: 100%;
+         border: none;
+         border-bottom: 1px solid #757575;
+         color: $grey-base;
+         height: 100%;
+         resize: none;
+
+         &:focus {
+            outline: none;
+         }
+
+         &:focus ~ label, &:valid ~ label {
+            font-size: 12px;
+            bottom: auto;
+            margin: 0;
+            top: 2px;
+         }
+
+         &.active ~ label {
+            top: 2px;
+            font-size: 12px;
+            bottom: auto;
+            margin: 0;
+         }
+
+      }
+
+      label {
+         color: $grey-base;
+         font-size: 18px;
+         display: block;
+         font-weight: normal;
+         position: absolute;
+         pointer-events: none;
+         left: 10px;
+         top: 20px;
+         bottom: 0;
+         //margin: auto;
+         height: 18px;
+         transition: 0.2s ease all;
+      }
+
+      select {
+         @include field;
+         font-size: 16px;
+         padding: 20px 10px 10px 10px;
+         box-sizing: border-box;
+         display: block;
+         width: 100%;
+         border: none;
+         border-bottom: 1px solid #757575;
+         color: $grey-base;
+         height: 100%;
+         cursor: pointer;
+         appearance: none;
+         -webkit-appearance: none;
+
+         &::-ms-expand {
+            display: none;
+         }
+
+         &:focus {
+            outline: none;
+         }
+
+         &:focus ~ label, &:valid ~ label {
+            font-size: 12px;
+            bottom: auto;
+            margin: 0;
+            top: 2px;
+         }
+
+         &.active ~ label {
+            top: 2px;
+            font-size: 12px;
+            bottom: auto;
+            margin: 0;
+         }
+
+      }
+
+      option {
+
+         &:first-of-type {
+            display: none;
+         }
+      }
+
+      .bar {
+         position: relative;
+         display: block;
+         width: 100%;
+
+         &:before, &:after {
+            content: '';
+            height: 2px;
+            width: 0;
+            bottom: 0;
+            position: absolute;
+            background: $grey-base;
+            transition: 0.2s ease all;
+         }
+
+         &:before {
+            left: 50%;
+         }
+
+         &:after {
+            right: 50%;
+         }
+
+      }
+
+      input:focus ~ .bar:before, input:focus ~ .bar:after {
+         width: 50%;
+      }
+
+      textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
+         width: 50%;
+      }
+
+      .error ~ .bar:before, .error ~ .bar:after {
+         background: $red;
+         width: 50%;
+      }
+
+   }
+
+   &__options{
+      margin: 50px 0 0;
+      font-size: 14px;
+      color: $grey-base;
+      box-sizing: border-box;
+
+      @include res(tablet){
+         margin-top: 0;
+      }
+
+      a{
+         display: block;
+         text-decoration: none;
+         color: $grey-base;
+
+         @include res(desktop){
+
+            &:hover{
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+
+}

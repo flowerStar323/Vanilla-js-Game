@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outFile": "./www/game.js",
+    "noImplicitAny": true,
+    "target": "es5",
+    "allowJs": false
+  },
+  "include": [
+    "frontend/game_ts/**/*.ts"
+  ],
+}

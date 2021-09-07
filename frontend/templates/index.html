@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <style>
+    :root{
+      touch-action: pan-x pan-y;
+      height: 100%;
+    }
+  </style>
+
+  <title>Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="sounds">
+    <audio
+      id="sound_game"
+      preload="auto"
+      src="<%=require('../assets/sounds/gamesound_da_1970.wav').default%>" >
+    </audio>
+    <audio
+      id="sound_10sekund"
+      preload="auto"
+      src="<%=require('../assets/sounds/finishedBeforeTime_da.wav').default%>" >
+    </audio>
+    <audio
+      id="sound_introAudio_en"
+      preload="auto"
+      src="<%=require('../assets/sounds/introSound_en.wav').default%>" >
+    </audio>
+    <audio
+      id="sound_introAudio_da"
+      src="<%=require('../assets/sounds/introSound_da.wav').default%>" >
+    </audio>
+    <audio
+      id="sound_pig"
+      preload="auto"
+      src="<%=require('../assets/sounds/pig.wav').default%>" >
+    </audio>
+    <audio
+      id="soundAll"
+      preload="auto"
+      src="<%=require('../assets/sounds/finishedBeforeTime_da.wav').default%>" >
+    >
+  </audio>
+  </div>
+
+  <div id="debug">
+  </div>
+
+  <div id="game">
+    <div id="pause__wrapper" class="pause__wrapper">
+      <div class="pause__overlay">
+        <video
+          id="video_default"
+          preload="auto"
+          src="<%=require('../assets/video/FallingClocksLoopVidevo.mov').default%>" >
+        </video>
+      </div>
+    </div>
+    <div id="intro-screen" class="wrap-in-front">
+      <div id="soundcheck">
+        <div id="version"></div>
+        <div class="button-wrapper">
+          <button data-play="intro">intro</button>
+          <div class="button-info">
+            Clicked: <span>0</span> times
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button data-play="game">game</button>
+          <div class="button-info">
+            Clicked: <span>0</span> times
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button data-play="sec10">10sekund</button>
+          <div class="button-info">
+            Clicked: <span>0</span> times
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button data-play="video">video</button>
+          <div class="button-info">
+            Clicked: <span>0</span> times
+          </div>
+        </div>
+
+      </div>
+      <div class="intro__table">
+
+        <img src="<%=require('../assets/img/table.png').default%>" alt="table">
+      </div>
+
+      <div class="intro__vaget">
+        <img src="<%=require('../assets/img/Vaegt.png').default%>"  alt="vaget">
+      </div>
+
+      <div class="game-type-buttons">
+        <div data-game="1" class="game-type-button"><img class="shake" id="game-type-button-1" alt="lunchbox 1"></div>
+        <div data-game="2" class="game-type-button"><img class="shake" id="game-type-button-2" alt="lunchbox 2"></div>
+        <div data-game="3" class="game-type-button"><img class="shake" id="game-type-button-3" alt="lunchbox 3"></div>
+        <div data-game="4" class="game-type-button"><img class="shake" id="game-type-button-4" alt="lunchbox 4"></div>
+      </div>
+
+      <div class="game-langs">
+        <img src="<%=require('../assets/img/card.png').default%>"  alt="language">
+        <div class="game-lang game-lang--da game-lang--active"><img src="<%=require('../assets/img/flag-dn.png').default%>" ></div>
+        <div class="game-lang game-lang--en"><img src="<%=require('../assets/img/flag-en.png').default%>"  alt="en"></div>
+      </div>
+
+      <div class="butcher__wrapper">
+        <div class="intro__butcher butcher">
+          <img src="<%=require('../assets/img/butcher-anim/butcher.png').default%>"  alt="butcher">
+          <div class="butcher__hat">
+            <img class="normal-hat" src="<%=require('../assets/img/butcher-anim/Hat.png').default%>"  alt="hat">
+            <img class="christmas-hat" src="<%=require('../assets/img/butcher-anim/nissehue.png').default%>"  alt="christmas hat">
+          </div>
+          <div class="butcher__pig">
+            <img id="intro-pig" src="<%=require('../assets/img/butcher-anim/Pig.png').default%>"  alt="pig">
+          </div>
+          <div class="butcher__hand">
+            <img src="<%=require('../assets/img/butcher-anim/hand.png').default%>"  alt="hand">
+          </div>
+          <div class="butcher__mouth">
+            <img src="<%=require('../assets/img/butcher-anim/mouth.png').default%>"  alt="mouth">
+          </div>
+          <div class="butcher__mustache">
+            <img src="<%=require('../assets/img/butcher-anim/mustache.png').default%>"  alt="mustache">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main main--hidden">
+
+      <img src="<%=require('../assets/img/ScorePaper.png').default%>" class="score-paper" alt="ScorePaper">
+      <div id="scoreboard">
+        <div id="scoreboard_gamename"></div>
+        <div>
+          <span id="scoreboard_correct_text">
+          </span>
+          <span id="scoreboard_correct">0</span>
+        </div>
+        <div>
+          <span id="scoreboard_wrong_text">
+          </span>
+          <span id="scoreboard_wrong">0</span>
+        </div>
+      </div>
+
+
+      <div class="main__winning">
+        <div class="main__winning-block">
+          <div>
+          </div>
+        </div>
+      </div>
+
+      <div class="close_card">
+        <img src="<%=require('../assets/img/close.png').default%>"  alt="close">
+        <div class="close__main close_btn">
+          <img src="<%=require('../assets/img/food/close_X.png').default%>"  alt="close">
+        </div>
+      </div>
+
+      <div class="board__image">
+          <img src="<%=require('../assets/img/food/baggrund_board_only.png').default%>" class="board__image__main gametype-1"  alt="">
+          <img src="<%=require('../assets/img/food/baggrund_board_only2.png').default%>" class="board__image__main gametype-2"  alt="">
+          <img src="<%=require('../assets/img/food/baggrund_board_only3.png').default%>" class="board__image__main gametype-3"  alt="">
+          <img src="<%=require('../assets/img/food/baggrund_board_only4.png').default%>" class="board__image__main gametype-4" alt="">
+      </div>
+
+      <div class="board__elements"></div>
+      <div class="board__elements-clon"></div>
+
+      <div class="lunchbox">
+        <div class="lunchbox-img">
+          <img class="lunchbox-from-top gametype-1 gametype-4" style="display: none !important" src="<%=require('../assets/img/food/lunchbox_from_abovpng.png').default%>" >
+          <img class="lunchbox-from-top gametype-1 gametype-4" src="<%=require('../assets/img/food/70er-madkasse-top.png').default%>">
+          <img class="lunchbox-from-top gametype-2" src="<%=require('../assets/img/food/klimavenlig-madkasse-top.png').default%>">
+          <img class="lunchbox-from-top gametype-3" src="<%=require('../assets/img/food/knap-så-klimavenlig-madkasse-top.png').default%>">
+        </div>
+        <div class="lunchbox__elements"></div>
+      </div>
+
+      <div class="clock-wrapper">
+        <div >
+          <img src="<%=require('../assets/img/aeggeur.png').default%>"  alt="clock image" class="clock">
+          <div class="clock-small-wrap">
+            <img src="<%=require('../assets/img/aeggeur-roterende.png').default%>"  alt="rotator image" class="clock-rotator-image" id="clock-rotator">
+          </div>
+        </div>
+      </div>
+
+      <div class="butcher__wrapper">
+        <div class="main__butcher butcher">
+          <img src="<%=require('../assets/img/butcher-anim/butcher.png').default%>"  alt="butcher">
+          <div class="butcher__hat">
+            <img class="normal-hat" src="<%=require('../assets/img/butcher-anim/Hat.png').default%>"  alt="hat">
+            <img class="christmas-hat" src="<%=require('../assets/img/butcher-anim/nissehue.png').default%>"  alt="christmas hat">
+          </div>
+          <div class="butcher__pig">
+            <img id="game-pig" src="<%=require('../assets/img/butcher-anim/Pig.png').default%>"  alt="pig">
+          </div>
+          <div class="butcher__hand">
+            <img src="<%=require('../assets/img/butcher-anim/hand.png').default%>"  alt="hand">
+          </div>
+          <div class="butcher__mouth">
+            <img src="<%=require('../assets/img/butcher-anim/mouth.png').default%>"  alt="mouth">
+          </div>
+          <div class="butcher__mustache">
+            <img src="<%=require('../assets/img/butcher-anim/mustache.png').default%>"  alt="mustache">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="result-screen" class="result">
+
+      <div class="close_card">
+        <img src="<%=require('../assets/img/close.png').default%>"  alt="close">
+        <div class="close__result close_btn">
+          <img src="<%=require('../assets/img/close_X.png').default%>"  alt="close">
+        </div>
+      </div>
+
+      <div class="overlay__btn">
+        <img src="<%=require('../assets/img/result/next_sign.png').default%>"  alt="next_sign">
+        <div class="result__overlay">Videre</div>
+      </div>
+
+      <div class="overlay__container">
+        <div id="fun-facts-display" class="overlay__inner">
+          <div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="result__desc">
+
+        <div class="message__board">
+          <img src="<%=require('../assets/img/result/message_board.png').default%>"  alt="message_board">
+
+          <div class="message__board_text">
+            <div class="result__message" data-texts="">
+            </div>
+          </div>
+        </div>
+
+        <div class="chain__board">
+          <img src="<%=require('../assets/img/result/chain_board.png').default%>"  alt="chain_board">
+          <div class="chain__board_text">
+            <div class="chain__board_game_name">
+            </div>
+            <span id="res_correct_text">
+            </span>
+            <span id="res_correct">
+            </span>
+            /
+            <span id="res_wrong_text">
+            </span>
+            <span id="res_wrong">
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="vaegt">
+        <img class="vaegt__img" src="<%=require('../assets/img/result/Vaegt.png').default%>"  alt="Vaegt">
+        <div class="pill pill__animate">
+          <img src="<%=require('../assets/img/result/Pil.png').default%>"  alt="Pil">
+        </div>
+
+        <div class="vaegt__cover">
+          <img src="<%=require('../assets/img/result/Cover.png').default%>"  alt="cover">
+        </div>
+
+        <div class="vaegt__left__elem">
+          <img src="<%=require('../assets/img/result/vaegt-left-element.png').default%>"  alt="vaegt-elem">
+        </div>
+
+        <div class="vaegt__bowl__left bowl__anim-left">
+          <img src="<%=require('../assets/img/result/vaegt-bowl-left.png').default%>"  alt="bowl-left">
+        </div>
+
+        <div class="result__lunchbox bowl__anim-right">
+          <div class="vaegt__bowl__right">
+            <img src="<%=require('../assets/img/result/vaegt-bowl-right.png').default%>"  alt="bowl-right">
+          </div>
+          <div class="result__lunchbox-img">
+            
+            <img src="<%=require('../assets/img/food/lunchbox_from_abovpng.png').default%>" class="lunchbox-from-top-endscreen"  alt="lunchbox">
+
+            <img class="lunchbox-from-top-endscreen gametype-1 gametype-4" src="<%=require('../assets/img/food/70er-madkasse-top.png').default%>">
+            <img class="lunchbox-from-top-endscreen gametype-2" src=" <%=require('../assets/img/food/klimavenlig-madkasse-top.png').default%>">
+            <img class="lunchbox-from-top-endscreen ganetype-3" src="<%=require('../assets/img/food/knap-så-klimavenlig-madkasse-top.png').default%>">
+          </div>
+        </div>
+
+      </div>
+
+      <!--
+      <div class="result__lunchboxes"></div>
+      -->
+      <div class="meat-table">
+        <img src="<%=require('../assets/img/koed_table.png').default%>"  alt="meat-table">
+      </div>
+
+
+      <div class="result__table">
+        <img src="<%=require('../assets/img/table.png').default%>"  alt="table">
+      </div>
+
+      <div class="butcher__wrapper">
+        <div class="result__butcher butcher">
+          <img src="<%=require('../assets/img/butcher-anim/butcher.png').default%>"  alt="butcher">
+          <div class="butcher__hat">
+            <img class="normal-hat" src="<%=require('../assets/img/butcher-anim/Hat.png').default%>"  alt="hat">
+            <img class="christmas-hat" src="<%=require('../assets/img/butcher-anim/nissehue.png').default%>"  alt="christmas hat">
+          </div>
+          <div class="butcher__pig">
+            <img id="result-pig" src="<%=require('../assets/img/butcher-anim/Pig.png').default%>"  alt="pig">
+          </div>
+          <div class="butcher__hand">
+            <img src="<%=require('../assets/img/butcher-anim/hand.png').default%>"  alt="hand">
+          </div>
+          <div class="butcher__mouth">
+            <img src="<%=require('../assets/img/butcher-anim/mouth.png').default%>"  alt="mouth">
+          </div>
+          <div class="butcher__mustache">
+            <img src="<%=require('../assets/img/butcher-anim/mustache.png').default%>"  alt="mustache">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="./assets/libs/phaser.min.js"></script>
+  <script src="./game.js"></script>
+
+</body>
+
+</html>

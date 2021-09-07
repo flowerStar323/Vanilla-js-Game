@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <style>
+    :root{
+      touch-action: pan-x pan-y;
+      height: 100%;
+    }
+  </style>
+
+  <title>Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <video
+  id="video_default"
+  preload="auto"
+  autoplay
+  src="<%=require('../assets/video/FallingClocksLoopVidevo.mov').default%>" 
+  style="max-width: 100%"
+  muted
+  >
+  <audio controls autoplay loop>
+    <source  src="../assets/video/pause_da.mp4" type="audio/mp4">
+  </audio>
+
+</video>
+
+</body>
+
+</html>

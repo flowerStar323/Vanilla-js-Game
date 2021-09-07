@@ -1,0 +1,33 @@
+.button{
+   border-radius: 4px;
+   text-decoration: none;
+   outline: none;
+   border: none;
+   text-align: center;
+   cursor: pointer;
+   color: white;
+   background: $grey-base;
+   transition: background .3s;
+   box-sizing: border-box;
+   padding: 14px 25px;
+   font-size: 18px;
+   -webkit-tap-highlight-color: transparent;
+
+   @include res(desktop){
+
+      &:hover{
+         background: $grey-base;
+      }
+
+      &:active{
+         background: $grey-base;
+      }
+   }
+
+   &-wrapper{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      box-sizing: border-box;
+   }
+}

@@ -1,0 +1,96 @@
+.show {
+  opacity: 1;
+}
+.result, .overlay__container, .pause__wrapper {
+  &.show {
+    display: block;
+  }
+}
+.hide {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+.hidden {
+  display: none !important;
+}
+
+#videos {
+  display: none;
+}
+
+#scoreboard {
+  position: absolute;
+  top: 68%;
+  left: 21%;
+  z-index: 2;
+  font-family: 'Inkfree', Fallback, sans-serif;
+  font-style: italic;
+  font-size: 1.5vw;
+  font-weight: 600;
+  width: 12%;
+  transform: rotate(-8deg);
+
+  >div{
+    color: #6a331c;
+  }
+
+  #scoreboard_gamename {
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+}
+
+img.score-paper{
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 20%;
+  z-index: 2;
+}
+
+
+/* variations related to gametype */
+
+.board__image__main.gametype-1,
+.board__image__main.gametype-2,
+.board__image__main.gametype-3{
+  position: inherit;
+  z-index: 2;
+  display: none;
+}
+
+.board__image__main.gametype-4{
+  position: inherit;
+  z-index: 1;
+  display: none;
+}
+
+.gametype-1 .board__image__main.gametype-1{display: block;}
+.gametype-2 .board__image__main.gametype-2{display: block;}
+.gametype-3 .board__image__main.gametype-3{display: block;}
+.gametype-4 .board__image__main.gametype-4{display: block;}
+
+
+.lunchbox-from-top.gametype-1,
+.lunchbox-from-top.gametype-2,
+.lunchbox-from-top.gametype-3,
+.lunchbox-from-top.gametype-4 {
+  display: none;
+}
+
+.gametype-1 .lunchbox-from-top.gametype-1 {display: block;}
+.gametype-2 .lunchbox-from-top.gametype-2 {display: block;}
+.gametype-3 .lunchbox-from-top.gametype-3 {display: block;}
+.gametype-4 .lunchbox-from-top.gametype-4 {display: block;} 
+
+.lunchbox-from-top-endscreen{
+  display: none
+}
+
+.gametype-1 .lunchbox-from-top-endscreen.gametype-1{display: block;}
+.gametype-2 .lunchbox-from-top-endscreen.gametype-2{display: block;}
+.gametype-3 .lunchbox-from-top-endscreen.gametype-3{display: block;}
+.gametype-4 .lunchbox-from-top-endscreen.gametype-4{display: block;}

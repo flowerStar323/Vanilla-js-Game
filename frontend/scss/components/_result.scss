@@ -1,0 +1,458 @@
+.result {
+    background-size: cover;
+    position: relative;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Arbutus Slab', serif;
+    color: rgb(252, 223, 189);
+}
+
+.result__table {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.result__table img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.on__Block {
+    display: block;
+}
+
+.overlay__btn {
+    position: absolute;
+    top: 0;
+    right: 1%;
+    width: 20%;
+    color: rgb(252, 223, 189);
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.overlay__btn img {
+    width: 100%;
+}
+
+.result__overlay {
+    position: absolute;
+    top: 43%;
+    left: 4%;
+    width: 70%;
+    font-size: 2.3vw;
+    text-align: center;
+    transform: rotate(-5deg);
+}
+
+.overlay__container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+}
+
+.overlay__inner {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+    div {
+        padding: 10px;
+        background-size: 90% 90%;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        height: 90%;
+        width: 60%;
+        bottom: 0;
+        position: absolute;
+        padding: 7% 10% 10% 10%;
+
+
+        h1 {
+            transform: rotate(-6deg);
+            font-family: 'Inkfree', Fallback, sans-serif;
+            width: 100%;
+            text-align: left;
+            font-size: 3vw;
+        }
+
+        p{
+            transform: rotate(6deg);
+            font-family: 'Inkfree', Fallback, sans-serif;
+            width: 100%;
+            text-align: left;
+            padding:40px 60px;
+            font-size: 24px;
+            font-size: 1.2vw;
+
+        }
+
+        button{
+            transform: rotate(6deg);
+            position: absolute;
+            background:transparent;
+            border: 2px solid #fcdfbd;
+            bottom: 18%;
+            right: 12%;
+            color: #fcdfbd;
+            text-transform: uppercase;
+            padding: 15px 60px 15px 15px;
+            font-size: 1.6vw;
+            border-radius: 5px;
+
+            &:after {
+                background-image: url("../assets/img/result/PlayAgainArrow.png");
+                background-repeat: no-repeat;
+                content: '';
+                width: 30px;
+                height: 30px;
+                background-size: 26px 26px;
+                transform: rotate(-5deg);
+                position: absolute;
+                top: 50%;
+                margin-top: -13px;
+                margin-left: 13px;
+            }
+        }
+
+
+    }
+
+
+}
+
+
+.result__desc {
+    position: absolute;
+    top:8%;
+    left: 30%;
+    width: 43%;
+    height: 45%;
+    text-align: center;
+}
+
+.message__board {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    font-size: 3.8vw;
+    font-weight: 800;
+    color: #391f13;
+    text-shadow: 0px 0px 2px #A1462B;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.chain__board {
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    width: 70%;
+    font-size: 3vw;
+    /*
+    font-family: Seventies;*/
+    font-family: 'Inkfree', Fallback, sans-serif;
+    font-style: italic;
+
+}
+
+@media screen and (max-width: 768px) {
+    .overlay__btn {
+        width: 30%;
+    }
+    .result__overlay {
+        font-size: 3vw;
+        top: 44%;
+    }
+
+    .close_card {
+        width: 19%;
+    }
+
+    .result__butcher {
+        width: 60%;
+    }
+
+    .vaegt {
+        left: -5%;
+        width: 50%
+    }
+
+    .result__lunchboxes {
+        right: 1%;
+        width: 60%;
+    }
+
+    .overlay__container {
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .result__desc {
+        top: 15%;
+        left: 14%;
+        width: 80%;
+    }
+    .message__board {
+        font-size: 8.8vw;
+    }
+    .chain__board {
+        width: 90%;
+        left: 0;
+        font-size: 7.3vw;
+    }
+    .result__butcher {
+        width: 66%;
+    }
+    .overlay__btn {
+        width: 36%;
+    }
+    .result__overlay {
+        font-size: 4vw;
+        top: 42%;
+    }
+}
+
+.message__board img, .chain__board img,
+.message__board_text,.chain__board_text {
+    width: 100%;
+}
+
+.message__board_text {
+    position: absolute;
+    top: 15%;
+    left: -5%;
+    transform: rotate(-2deg);
+}
+
+.chain__board_text {
+    position: absolute;
+    top: 71%;
+    transform: rotate(2deg);
+    text-shadow: -2px 2px 3px #000;
+    font-size: 2.6vw;
+}
+
+.chain__board_game_name {
+    font-size: 1.4vw;
+}
+
+.vaegt {
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    width: 36%;
+    z-index: 3;
+}
+
+.vaegt__cover {
+    position: absolute;
+    top: 37%;
+    left: 23%;
+    width: 28%;
+}
+
+.vaegt__cover img {
+    width: 100%;
+}
+
+.vaegt__left__elem {
+    position: absolute;
+    bottom: 22%;
+    left: 9%;
+    width: 10%;
+}
+
+.vaegt__bowl__left {
+    position: absolute;
+    bottom: 22%;
+    left: 0;
+    width: 27%;
+    transition: all 1s;
+}
+
+.vaegt__left__elem img,
+.vaegt__bowl__left img {
+    width: 100%;
+}
+
+.pill {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: 12%;
+    height: 33%;
+    transform-origin: center  bottom;
+    transition: all 1s;
+}
+
+.pill img {
+    width: 100%;
+    transform: rotate(-43.5deg);
+}
+
+.result__lunchbox {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    width: 70%;
+    height: 30%;
+    transition: all 1s;
+}
+
+.result__lunchbox-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.vaegt__bowl__right {
+    position: absolute;
+    top: 92%;
+    left: 14%;
+    width: 70%;
+}
+
+.vaegt__bowl__right img {
+    width: 100%;
+}
+
+.result__lunchbox .lunchbox__elements div{
+    width: 25%;
+}
+
+
+.result__lunchboxes, .meat-table {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+    width: 55%;
+    padding-bottom: 4% ;
+    z-index: 3;
+}
+
+.meat-table {
+    right: 0;
+    padding-bottom: 2%;
+}
+
+.result__lunchboxes div {
+    width: 33%;
+}
+
+
+
+
+.bowl__anim-left {
+    animation: bowlAanimLeft 5s 1;
+    animation-timing-function: cubic-bezier(0.2, 0.2, 0.3, 0.3);
+}
+
+.bowl__anim-right {
+    animation: bowlAnimRight 5s 1;
+    animation-timing-function: cubic-bezier(0.2, 0.2, 0.3, 0.3);
+}
+
+.pill__animate {
+    animation: pillAnimate 5s 1;
+    animation-timing-function: cubic-bezier(0.2, 0.2, 0.3, 0.3);
+}
+
+@keyframes bowlAanimLeft {
+    0% {
+
+        transform: translateY(0%);
+    }
+
+    20% {
+
+        transform: translateY(-10%);
+    }
+
+    50% {
+
+        transform: translateY(-3%);
+    }
+
+    80% {
+
+        transform: translateY(-15%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes bowlAnimRight {
+
+    0% {
+
+        transform: translateY(0%);
+    }
+
+    20% {
+
+        transform: translateY(15%);
+    }
+
+    50% {
+
+        transform: translateY(3%);
+    }
+
+    80% {
+
+        transform: translateY(20%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes pillAnimate {
+    0% {
+
+        transform:  rotate(0deg);
+    }
+
+    20% {
+
+        transform:  rotate(65deg);
+    }
+
+    50% {
+
+        transform:  rotate(15deg);
+    }
+
+    80% {
+
+        transform:  rotate(55deg);
+    }
+
+    100% {
+        transform:  rotate(0deg);
+    }
+}

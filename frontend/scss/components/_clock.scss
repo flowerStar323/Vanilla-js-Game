@@ -1,0 +1,49 @@
+.clock-wrapper {
+    position: absolute;
+    display: inline-block;
+    // top: 57%;
+    bottom: 0;
+    left: -2%;
+    width: 24%;
+    overflow: hidden;
+    transform: translateY(3%);
+    z-index: 4;
+}
+
+.clock-wrapper div {
+    // transform: translateY(45px);
+}
+
+.clock-small-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    transform: rotate(-27deg) ;
+}
+
+.clock-rotator-image {
+    position: absolute;
+    top: 23.6%;
+    left: 20.1%;
+    width: 57.3%;
+    transition: transform 0.3s;
+}
+
+// .clock-rotator-image {
+
+//     position: absolute;
+//     top: 12%;
+//     left: 21%;
+//     width: 58%;
+//     // width: 58%;
+
+//     // transform: rotate(-1deg) ;
+//     transition: transform 0.3s;
+//     // z-index: 100;
+//     // transform-origin: center center;
+//     //  transform: translate(-49.1%, -50.6%) rotate(calc(var(--rotation) * 1deg));
+//     // border: 1px solid blue;
+// }

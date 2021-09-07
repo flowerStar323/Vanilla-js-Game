@@ -1,0 +1,173 @@
+{
+  "DATA": {
+    "isChristmasEdition": false,
+    "gameCountdownFrom": 60000,
+    "gameFoodShuffelInterval": 2000,
+    "language":{
+      "en":{
+        "resultOverlay": "Continue",
+        "resultMessage": "<span>Thats the way!<br/> Karl Johan</span>",
+        "gameEndedBeforeTime": "Game ended before time",
+        "funfactArray": ["funfact 1", "funfact 2", "funfact 3"],
+        "correct": "Correct: ",
+        "wrong": "Wrong: ",
+        "start1": "Start normal game",
+        "start2": "Start game - Christmas edition",
+        "introSound": {
+          "duration": 21000,
+          "mouthSync": [
+            900,
+            [3700, 600],
+            [6500, 700],
+            [8700, 800],
+            [13300, 700],
+            [16800, 700],
+            3800
+          ]
+        }
+      },
+      "da":{
+        "resultOverlay" : "Videre",
+        "resultMessage": "Sådan <br/> Karl Johan",
+        "gameEndedBeforeTime": "Spillet er færdig før tid!",
+        "funfactArray": ["<h1>Vidste du at...</h1><p>Lorem Ipsum is simply dumter took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p><button>Spil igen</button>", "<h1>Vidste du at...</h1><p>Lorem Ipsum</p><button>Spil igen</button>"],
+        "correct": "Korrekt: ",
+        "wrong": "Forkert: ",
+        "start1": "Start normalt spil",
+        "start2": "Start spil - Juleudgave",
+        "introSound": {
+          "duration": 21000,
+          "mouthSync": [
+            1000,
+            [3700, 600],
+            [6500, 700],
+            [8700, 800],
+            [13300, 700],
+            4000
+          ]
+        }
+      }
+    },
+    "gameTypes": [
+      {
+        "id": 1,
+        "name": {
+          "en": "Some name",
+          "da": "Noget navn"
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Some name 2",
+          "da": "Noget navn 2"
+        }
+      },
+      {
+        "id": 3
+      },
+      {
+        "id": 4
+      }
+    ],
+    "foodList": [
+      {
+        "name": "Med ketchup",
+        "img": "assets/img/food/food1.png",
+        "belongToGameTypes": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "name": "avokadomad",
+        "img": "assets/img/food/food2.png",
+        "belongToGameTypes": [
+          3,
+          4
+        ]
+      },
+      {
+        "name": "kartoffelmad",
+        "img": "assets/img/food/food3.png",
+        "belongToGameTypes": [
+          3,
+          4
+        ]
+      },
+      {
+        "name": "leverpostej",
+        "img": "assets/img/food/food4.png",
+        "belongToGameTypes": [
+
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "name": "makrel mad",
+        "img": "assets/img/food/food5.png",
+        "belongToGameTypes": [
+          4
+        ]
+      },
+      {
+        "name": "nutellamad",
+        "img": "assets/img/food/food6.png",
+        "belongToGameTypes": [
+          4
+        ]
+      },
+      {
+        "name": "Med ketchup 2",
+        "img": "assets/img/food/food7.png",
+        "belongToGameTypes": [
+          2,
+          3
+        ]
+      },
+      {
+        "name": "avokadomad 2",
+        "img": "assets/img/food/food8.png",
+        "belongToGameTypes": [
+          3,
+          4
+        ]
+      },
+      {
+        "name": "kartoffelmad 2",
+        "img": "assets/img/food/food9.png",
+        "belongToGameTypes": [
+          3,
+          4
+        ]
+      },
+      {
+        "name": "leverpostej 2",
+        "img": "assets/img/food/food10.png",
+        "belongToGameTypes": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "name": "makrel mad 2",
+        "img": "assets/img/food/food5.png",
+
+        "belongToGameTypes": [
+          4
+        ]
+      },
+      {
+        "name": "nutellamad 2",
+        "img": "assets/img/food/food2.png",
+        "belongToGameTypes": [
+          4
+        ]
+      }
+    ]
+  }
+}

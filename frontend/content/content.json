@@ -1,0 +1,695 @@
+{
+  "DATA": {
+    "isChristmasEdition": true,
+    "gameCountdownFrom": 30000,
+    "gameFoodShuffelInterval": 2000,
+    "language":{
+      "en":{
+        "resultOverlay": "Continue",
+        "resultMessage": "<span>Thats the way!<br/> Karl Johan</span>",
+        "gameEndedBeforeTime": "Game ended before time",
+        "funfactArray": [
+                         "<h1>Did you know that...</h1><p>In Rosenborg Castle, they found a slice of rye bread and fat, wrapped in a piece of newspaper from 1886? It is probably Denmark's oldest packed lunch.</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>The packed lunch was a result of industrialisation, since people no longer lived and worked in the same place?</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>Liver pâté was invented in Copenhagen in 1847? Liver pâté was expensive, but the price fell in or around 1900, when they started making it in factories.</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>Today, people consume an average of 2 million liver pâté sandwiches a day in Denmark?</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>In 1995, liver pâté, salami and cheese sandwiches were the most popular sandwiches in schoolchildren's lunch boxes?</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>If you can really stretch a piece of liquorice or a wine gum to a substantial length, there is a lot of gelatine in it? Often gelatine comes from pig or cow hide.</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>Bread sort of contains pig hair? To achieve better baking properties, L-cysteine, extracted from pig hair, is added to flour.</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>The idea of the major 1957 advertising campaign, Gris på Gaflen (Pork on the Fork) was to persuade housewives to use the parts (perhaps) of the pig that were not exported?</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>In 1961, there were 8 million slaughter pigs in Denmark? In 2019, there were more than 12 million.</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>In the Middle Ages, pigs roamed freely through towns and cities? For decades, legislators attempted to ban pigs in Danish towns and cities, but in 1861 there were still around 12,000 of them.</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>In or around the year 2000, gourmet chefs rediscovered pigs' cheeks, snouts, tails and trotters and featured them in their menus?</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>In 2010, almost 4% of Danes were more or less vegetarian, but that by 2019 the number had risen to 14%?</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>Between 2010 and 2019, the number of Danes who chose to have one meatless day a week increased from 17 to 30%?</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>In 1451, Copenhagen's butchers were given the exclusive right to slaughter cows, calves, lambs and sheep? Pigs were regarded as a kind of pet and were slaughtered in homes or by special pig butchers. </p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>Until the invention of the stove in the 19th century, all cooking was done over an open fire?</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>The meat mincer was first invented in the late 19th century? Before then, you had to chop meat very finely with a knife.</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>The pig's snout is very important? The pig uses it to explore the world, because the senses a pig uses most are smell and taste. Pigs hear and see like humans.</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>Since the 1970s, Danish slaughter pigs have become less fat? One third of the fat has been replaced by meat.</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>Denmark's first hot dog stand arrived in Aarhus in 1917?</p><button>Play again</button>",
+                         "<h1>Did you know that...</h1><p>The carbon emissions per kilo of meat are 4.6 for pigs, 5.5 for chickens and 14 for cows?</p><button>Play again</button>"],
+        "correct": "Correct: ",
+        "wrong": "Wrong: ",
+        "start1": "Start normal game",
+        "start2": "Start game - Christmas edition",
+        "introSound": {
+          "duration": 21000,
+          "mouthSync": [
+            400,
+            [2800, 400],
+            [4400, 1000],
+            [7800, 500],
+            [8000, 200],
+            [11000, 500],
+            [12000, 500],
+            [16500, 1000],
+            100
+          ]
+        }
+      },
+      "da":{
+        "resultOverlay" : "Videre",
+        "resultMessage": "Sådan <br/> Karl Johan",
+        "gameEndedBeforeTime": "Spillet er færdig før tid!",
+        "funfactArray": ["<h1>Vidste du at...</h1><p>På Rosenborg slot er der fundet et stykke rugbrød med fedt pakket ind i en avis fra 1886. Det er sikkert Danmarks ældste madpakke.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>Madpakken kom sammen med industrialiseringen, da man ikke længere boede og arbejdede samme sted.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>Leverpostej blev opfundet i 1847 i København. Leverpostej var dyrt, men faldt i pris da den fra omkring 1900 blev lavet på fabrikker.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>I dag bliver der i gennemsnit spist to millioner leverpostejmadder hver dag i Danmark.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>I 1995 var madder med leverpostej, spegepølse og ost de mest populære i skoleelevernes madpakker.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>Hvis du kan trække et stykke lakrids eller vingummi langt, er der meget gelatine i. Det kan kommer fra hud af grise og køer.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>På en måde er der grisehår i brød. For at opnå bedre bage egenskaber, bliver melet tilsat proteinet L-cystein fra grisehår.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>Meningen med den store reklamekampagne Gris på Gaflen fra 1957 var at få husmødrene til at bruge de dele (måske) af grisen, der ikke blev solgt til udlandet.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>I 1961 var der otte millioner slagtesvin i Danmark. I 2019 var der over tolv millioner.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>I middelalderen gik svinene frit rundt i byerne. Lovgiverne forsøgte i årtier at forbyde svin i danske byer - men i 1861 var der stadig næsten 12.000. </p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>Fra omkring år 2000 fandt gourmetkokke grisekæber, -tryner, -haler og -tæer frem fra gemmerne og satte dem på menukortet.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>I 2010 spiste knap fire procent af danskerne mere eller mindre vegetarisk, i 2019 var det 14 procent.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>Fra 2010 til 2019 steg antallet af danskerne med én kødløs dag om ugen fra 17 til 30 procent.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>Slagterne i København fik i 1451 eneret på at slagte køer, kalve, lam og får. Grise blev anset som en slags husdyr og blev slagtet i hjemmene eller af særlige svineslagtere.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>Al madlavning foregik over bål indtil komfuret blev opfundet i midten af 1800-tallet.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>Kødhakkeren blev først opfundet sidst i 1800-tallet. Indtil da skulle man hakke kødet meget fint med en kniv. </p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>Grisens tryne er meget vigtig. Den bruges til at undersøge verden med, da grisens mest brugte sanser er lugt og smag. Grisen hører og ser som mennesker.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>Fra 1970’erne er danske slagtesvin blevet mindre fede. En tredjedel af fedtet er erstattet af kød.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>Danmarks første pølsevogn kom til Aarhus i 1917.</p><button>Spil igen</button>",
+                         "<h1>Vidste du at...</h1><p>CO2-udledning pr. kg. kød er 4,6 for gris, 5,5 for kylling og hele 14 for okse.</p><button>Spil igen</button>"
+                        ],
+        "correct": "Korrekt: ",
+        "wrong": "Forkert: ",
+        "start1": "Start normalt spil",
+        "start2": "Start spil - Juleudgave",
+        "introSound": {
+          "duration": 21000,
+          "mouthSync": [
+            400,
+            [2800, 400],
+            [4400, 1000],
+            [7800, 500],
+            [8000, 200],
+            [11000, 500],
+            [12000, 500],
+            [16500, 1000],
+            100
+          ]
+        }
+      }
+    },
+    "gameTypes": [
+      {
+        "id": 1,
+        "name": {
+          "en": "The 1970s lunch box",
+          "da": "1970'er madkasse"
+        },
+        "gameSound":{
+          "en":"./assets/sounds/gamesound_en_1970.wav",
+          "da":"./assets/sounds/gamesound_da_1970.wav"
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Climate-friendly",
+          "da": "Klimavenlige"
+        },
+        "gameSound":{
+          "en":"./assets/sounds/gamesound_en_klimavaenlig.wav",
+          "da":"./assets/sounds/gamesound_da_klimavaenlig.wav"
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Not so climate-friendly",
+          "da": "Knap så klimavenlig"
+        },
+        "gameSound":{
+          "en":"./assets/sounds/gamesound_en_ikkeklimavaenlig.wav",
+          "da":"./assets/sounds/gamesound_da_ikkeklimavaenlig.wav"
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Christmas lunchbox",
+          "da": "Jule madkasse"
+        },
+        "gameSound":{
+          "en":"./assets/sounds/gamesound_en_christmas.wav",
+          "da":"./assets/sounds/gamesound_da_christmas.wav"
+        }
+      }
+    ],
+    "foodList": [
+      {
+        "name": "Æg rugbrød",
+        "img": "content/foodimg/Æg rugbrød.png",
+        "belongToGameTypes": [
+          1, 2
+        ]
+      },
+      {
+        "name": "Dyrlægens natmad",
+        "img": "content/foodimg/Dyrlægens natmad.png",
+        "belongToGameTypes": [
+          1, 3
+        ]
+      },
+
+      {
+        "name": "Flæskesteg rugbrød",
+        "img": "content/foodimg/Flæskesteg rugbrød.png",
+        "belongToGameTypes": [
+          1,4
+        ]
+      },
+      {
+        "name": "Leverpostej sky rugbrød",
+        "img": "content/foodimg/Leverpostej sky rugbrød.png",
+        "belongToGameTypes": [
+          1
+        ]
+      },
+      {
+        "name": "Medisterpølse rugbrød",
+        "img": "content/foodimg/Medisterpølse rugbrød.png",
+        "belongToGameTypes": [
+          1,4
+        ]
+      },
+      {
+        "name": "Ost rugbrød",
+        "img": "content/foodimg/Ost rugbrød.png",
+        "belongToGameTypes": [
+          1, 3
+        ]
+      },
+      {
+        "name": "Ost skinke brød",
+        "img": "content/foodimg/Ost skinke brød.png",
+        "belongToGameTypes": [
+          1, 3
+        ]
+      },
+      {
+        "name": "Pålægschokolade rugbrød",
+        "img": "content/foodimg/Pålægschokolade rugbrød.png",
+        "belongToGameTypes": [
+          1, 3
+        ]
+      },
+      {
+        "name": "Rosiner",
+        "img": "content/foodimg/Rosiner.png",
+        "belongToGameTypes": [
+          1, 2
+        ]
+      },
+      {
+        "name": "Tomat rugbrød",
+        "img": "content/foodimg/Tomat rugbrød.png",
+        "belongToGameTypes": [
+          1, 2
+        ]
+      },
+      {
+        "name": "Oksebryst peberrod rugbrød",
+        "img": "content/foodimg/Oksebryst peberrod rugbrød.png",
+        "belongToGameTypes": [
+          1, 3
+        ]
+      },
+      {
+        "name": "Torskerogn rugbrød",
+        "img": "content/foodimg/Torskerogn rugbrød.png",
+        "belongToGameTypes": [
+          1, 3
+        ]
+      },
+
+      
+      {
+        "name": "Flæskestegs sandwich",
+        "img": "content/foodimg/Flæsketegs sandwich.png",
+        "belongToGameTypes": [
+          4, 3
+        ]
+      },
+      {
+        "name": "Forårsruller",
+        "img": "content/foodimg/Forårsruller.png",
+        "belongToGameTypes": [
+          2
+        ]
+      },
+      {
+        "name": "Kiwi",
+        "img": "content/foodimg/Kiwi.png",
+        "belongToGameTypes": [
+          2
+        ]
+      },
+      {
+        "name": "Appelsin",
+        "img": "content/foodimg/Appelsin.png",
+        "belongToGameTypes": [
+          2, 4
+        ]
+      },
+      {
+        "name": "Lakrids",
+        "img": "content/foodimg/Lakrids.png",
+        "belongToGameTypes": [
+          4, 2
+        ]
+      },
+      {
+        "name": "Marcipangris",
+        "img": "content/foodimg/Marcipangris.png",
+        "belongToGameTypes": [
+          4, 3
+        ]
+      },
+      {
+        "name": "Rødkål",
+        "img": "content/foodimg/Rødkål.png",
+        "belongToGameTypes": [
+          4, 2 
+        ]
+      },
+      {
+        "name": "Vingummi",
+        "img": "content/foodimg/Vingummi.png",
+        "belongToGameTypes": [
+          4, 2
+        ]
+      },      
+      {
+        "name": "Skyr",
+        "img": "content/foodimg/Skyr.png",
+        "belongToGameTypes": [
+          2
+        ]
+      },
+      {
+        "name": "Kebab",
+        "img": "content/foodimg/Kebab.png",
+        "belongToGameTypes": [
+          3
+        ]
+      },
+      {
+        "name": "Pålægschokolade brød",
+        "img": "content/foodimg/Pålægschokolade brød.png",
+        "belongToGameTypes": [
+          3
+        ]
+      },
+      {
+        "name": "Reje franskbrød",
+        "img": "content/foodimg/Reje franskbrød.png",
+        "belongToGameTypes": [
+          3
+        ]
+      },
+      {
+        "name": "Figenpålæg rugbrød",
+        "img": "content/foodimg/Figenpålæg rugbrød.png",
+        "belongToGameTypes": [
+          2, 3
+        ]
+      }
+
+
+      ,
+      {
+        "name": "Æble",
+        "img": "content/foodimg/Æble.png",
+        "belongToGameTypes": [
+          1, 2
+        ]
+      }
+      ,
+      {
+        "name": "Æg",
+        "img": "content/foodimg/Æg.png",
+        "belongToGameTypes": [
+          1, 2
+        ]
+      }      ,
+      {
+        "name": "Agurkskiver",
+        "img": "content/foodimg/Agurkskiver.png",
+        "belongToGameTypes": [
+          1, 2
+        ]
+      },
+      {
+        "name": "Bananmad",
+        "img": "content/foodimg/Bananmad.png",
+        "belongToGameTypes": [
+          1, 2
+        ]
+      }      ,
+      {
+        "name": "Blommer",
+        "img": "content/foodimg/Blommer.png",
+        "belongToGameTypes": [
+          1, 2
+        ]
+      },
+      {
+        "name": "Fiskefrikadelle",
+        "img": "content/foodimg/Fiskefrikadelle.png",
+        "belongToGameTypes": [
+          1, 3
+        ]
+      },
+      {
+        "name": "Fuglekvidder",
+        "img": "content/foodimg/Fuglekvidder.png",
+        "belongToGameTypes": [
+          1
+        ]
+      },
+      {
+        "name": "Gulerodstave",
+        "img": "content/foodimg/Gulerodstave.png",
+        "belongToGameTypes": [
+          1, 2
+        ]
+      },
+      {
+        "name": "Hotdog",
+        "img": "content/foodimg/Hotdog.png",
+        "belongToGameTypes": [
+          1, 3
+        ]
+      },
+      {
+        "name": "Kartoffel",
+        "img": "content/foodimg/Kartoffel.png",
+        "belongToGameTypes": [
+          1, 2
+        ]
+      },
+      {
+        "name": "Kiks",
+        "img": "content/foodimg/Kiks.png",
+        "belongToGameTypes": [
+          1, 2
+        ]
+      },
+      {
+        "name": "Laksemad",
+        "img": "content/foodimg/Laksemad.png",
+        "belongToGameTypes": [
+          1, 3
+        ]
+      },
+      {
+        "name": "Markrel",
+        "img": "content/foodimg/Markrel.png",
+        "belongToGameTypes": [
+          1, 3
+        ]
+      },
+      {
+        "name": "Pære",
+        "img": "content/foodimg/Pære.png",
+        "belongToGameTypes": [
+          1, 2
+        ]
+      },
+      {
+        "name": "Roastbeef_frit",
+        "img": "content/foodimg/Roastbeef_frit.png",
+        "belongToGameTypes": [
+          1, 3
+        ]
+      },
+      {
+        "name": "Røræg",
+        "img": "content/foodimg/Røræg.png",
+        "belongToGameTypes": [
+          1, 2
+        ]
+      },
+      {
+        "name": "Rosinmad",
+        "img": "content/foodimg/Rosinmad.png",
+        "belongToGameTypes": [
+          1
+        ]
+      },
+      {
+        "name": "Roastbeef_frit",
+        "img": "content/foodimg/Roastbeef_frit.png",
+        "belongToGameTypes": [
+          1
+        ]
+      },
+      {
+        "name": "Rullepølse",
+        "img": "content/foodimg/Rullepølse.png",
+        "belongToGameTypes": [
+          1, 3
+        ]
+      },
+      {
+        "name": "Sild",
+        "img": "content/foodimg/Sild.png",
+        "belongToGameTypes": [
+          1, 4
+        ]
+      },
+      {
+        "name": "Æbleskiver",
+        "img": "content/foodimg/Æbleskiver.png",
+        "belongToGameTypes": [
+          4, 2
+        ]
+      },
+      {
+        "name": "Brændte mandler",
+        "img": "content/foodimg/Brændte mandler.png",
+        "belongToGameTypes": [
+          4, 3
+        ]
+      },
+      {
+        "name": "Brune kartofler",
+        "img": "content/foodimg/Brune kartofler.png",
+        "belongToGameTypes": [
+          4
+        ]
+      },
+      {
+        "name": "Sild",
+        "img": "content/foodimg/Sild.png",
+        "belongToGameTypes": [
+          4
+        ]
+      },
+      {
+        "name": "Brunkager",
+        "img": "content/foodimg/Brunkager.png",
+        "belongToGameTypes": [
+          4
+        ]
+      },
+      {
+        "name": "Chips",
+        "img": "content/foodimg/Chips.png",
+        "belongToGameTypes": [
+          4
+        ]
+      },
+      {
+        "name": "Chokolade",
+        "img": "content/foodimg/Chokolade.png",
+        "belongToGameTypes": [
+          4, 3
+        ]
+      },
+      {
+        "name": "Gløgg",
+        "img": "content/foodimg/Gløgg.png",
+        "belongToGameTypes": [
+          4
+        ]
+      },
+      {
+        "name": "Havregrynskugler",
+        "img": "content/foodimg/Havregrynskugler.png",
+        "belongToGameTypes": [
+          4
+        ]
+      },
+      {
+        "name": "Kalkun",
+        "img": "content/foodimg/Kalkun.png",
+        "belongToGameTypes": [
+          4
+        ]
+      },
+      {
+        "name": "Klejner",
+        "img": "content/foodimg/Klejner.png",
+        "belongToGameTypes": [
+          4
+        ]
+      },
+      {
+        "name": "marcipan",
+        "img": "content/foodimg/marcipan.png",
+        "belongToGameTypes": [
+          4, 3
+        ]
+      },
+      {
+        "name": "Pebernødder",
+        "img": "content/foodimg/Pebernødder.png",
+        "belongToGameTypes": [
+          4
+        ]
+      },
+      {
+        "name": "Ris alamande",
+        "img": "content/foodimg/Ris alamande.png",
+        "belongToGameTypes": [
+          4, 3
+        ]
+      },
+      {
+        "name": "Risengrød",
+        "img": "content/foodimg/Risengrød.png",
+        "belongToGameTypes": [
+          4, 2
+        ]
+      },
+      {
+        "name": "Salat02",
+        "img": "content/foodimg/Salat02.png",
+        "belongToGameTypes": [
+          4, 2
+        ]
+      },
+      {
+        "name": "Slik",
+        "img": "content/foodimg/Slik.png",
+        "belongToGameTypes": [
+          4
+        ]
+      },
+      {
+        "name": "Vaniljekranse",
+        "img": "content/foodimg/Vaniljekranse.png",
+        "belongToGameTypes": [
+          4
+        ]
+      },
+      {
+        "name": "Blåbær",
+        "img": "content/foodimg/Blåbær.png",
+        "belongToGameTypes": [
+          2
+        ]
+      },
+      {
+        "name": "Blåbær",
+        "img": "content/foodimg/Blåbær.png",
+        "belongToGameTypes": [
+          2
+        ]
+      },
+      {
+        "name": "chokoladekage",
+        "img": "content/foodimg/chokoladekage.png",
+        "belongToGameTypes": [
+          2, 3
+        ]
+      },
+      {
+        "name": "Humus rugbrød",
+        "img": "content/foodimg/Humus rugbrød.png",
+        "belongToGameTypes": [
+          2
+        ]
+      },
+      {
+        "name": "Jordbær",
+        "img": "content/foodimg/Jordbær.png",
+        "belongToGameTypes": [
+          2
+        ]
+      },
+      {
+        "name": "Kartoffelsuppe",
+        "img": "content/foodimg/Kartoffelsuppe.png",
+        "belongToGameTypes": [
+          2
+        ]
+      },
+      {
+        "name": "Nødder",
+        "img": "content/foodimg/Nødder.png",
+        "belongToGameTypes": [
+          2
+        ]
+      },
+      {
+        "name": "Peberfrugt",
+        "img": "content/foodimg/Peberfrugt.png",
+        "belongToGameTypes": [
+          2
+        ]
+      },
+      {
+        "name": "Burger",
+        "img": "content/foodimg/Burger.png",
+        "belongToGameTypes": [
+          3
+        ]
+      }
+      ,
+      {
+        "name": "Kiksekage",
+        "img": "content/foodimg/Kiksekage.png",
+        "belongToGameTypes": [
+          3
+        ]
+      }      ,
+      {
+        "name": "Salat med laks",
+        "img": "content/foodimg/Salat med laks.png",
+        "belongToGameTypes": [
+          3
+        ]
+      }
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ]
+  }
+}
+
+
+

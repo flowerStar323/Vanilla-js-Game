@@ -1,0 +1,130 @@
+@import "general/normalize";
+@import "general/mixin-media";
+@import "general/local-vars";
+@import "general/general";
+
+// common
+@import "common/keyframes";
+@import "common/overlay";
+@import "common/flex";
+
+// components
+@import "components/form";
+@import "components/button";
+@import "components/checkbox";
+@import "components/clock";
+@import "components/butcher";
+@import "components/intro";
+@import "components/main";
+@import "components/result";
+@import "components/christmas";
+
+
+
+/* brightsign screen size: 1920 X 1080 */
+
+@font-face {
+  font-family: 'Inkfree';
+  src: url('../assets/fons/Inkfree.ttf')  format('truetype')
+}
+.main {background-image: url('../assets/img/food/baggrund_table_only.png')}
+.main__winning, .overlay__container {background-image: url("../assets/img/result/endcard/40pc-overlay.png")}
+.main__winning-block, .overlay__inner div {background-image: url("../assets/img/result/endcard/Overlay kort.png")}
+#result-screen {background-image: url('../assets/img/result/bg-result.png')}
+
+.christmas-elm.top {background-image: url('../assets/img/jul/ornaments/juledeko-samlet.png')}
+.christmas-elm.nisse1 {background-image: url('../assets/img/jul/kravlenisser/M01134_srcset-large.png')}
+.christmas-elm.nisse2 {background-image: url('../assets/img/jul/kravlenisser/scan0012.png')}
+.christmas-elm.christmas-table {background-image: url('../assets/img/jul/gran/gran.png')}
+.christmas-elm.candle:after {background-image: url('../assets/img/jul/gran/candle-bottom.png')}
+.christmas-elm.candle.candlebig:after {background-image: url('../assets/img/jul/kalenderlys/kalenderlys.png')}
+
+
+//test-style
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  border: none;
+  padding: 0p;
+  margin: 0;
+}
+
+#game-loader-screen {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#game-loader-screen button {
+  // position: absolute;
+  // left: 0;
+  width: 100%;
+  // height: 100%;
+  color: #ffffff;
+  text-align: center;
+  background: none;
+  cursor: pointer;
+  border: none;
+  font-family: 'Inkfree', Fallback, sans-serif;
+  font-weight: 600;
+  font-size: 5vw;
+  outline: none;
+  padding: 4%;
+}
+
+.bg-video {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.close_card {
+  position: relative;
+  top: 0;
+  left: 2%;
+  width: 12%;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.close_card img {
+  width: 100%;
+}
+
+.close_btn {
+  position: absolute;
+  top: 38%;
+  left: 34%;
+  width: 29%;
+}
+
+.close_btn img {
+  width: 100%;
+}
+
+.pointer__none {
+  pointer-events: none;
+}
+
+
+#sounds {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 9000;
+  display: none;
+  button {
+    margin: 20px;
+  }
+}
+
+#result-screen .close_card {
+  z-index: 4;
+}

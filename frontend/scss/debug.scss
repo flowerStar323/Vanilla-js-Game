@@ -1,0 +1,63 @@
+.test {
+  max-width: 200px;
+  max-height: 200px;
+  top: 100px;
+  left: 100px;
+}
+
+#version {
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  margin-right: 20px;
+}
+
+#soundcheck {
+  position: fixed;
+  z-index: 10000;
+  height: 100px;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  &.show {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+#soundcheck {
+  button {
+    padding: 20px;
+  }
+  .button-wrapper {
+    display: block;
+    .button-info {
+      padding: 10px 20px;
+      background-color: white;
+      margin: 20px;
+    }
+  }
+}
+
+#debug {
+  display: none;
+  position: fixed;
+  z-index: 9001;
+  right: 20px;
+  bottom: 20px;
+  max-height: 300px;
+  padding: 10px;
+  font-size: 12px;
+  font-family: arial;
+  background-color: white;
+  overflow-y: scroll;
+  width: 200px;
+  > div {
+    padding: 5px 0;
+  }
+  &.show {
+    display: block;
+  }
+}
